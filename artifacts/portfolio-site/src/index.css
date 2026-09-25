@@ -91,7 +91,8 @@ button { cursor: pointer; }
 .ambient-one { top: 7rem; right: -12rem; width: 35rem; height: 35rem; background: radial-gradient(circle, hsl(288 57% 35% / .32), transparent 67%); }
 .ambient-two { top: 42rem; left: -17rem; width: 38rem; height: 38rem; background: radial-gradient(circle, hsl(326 55% 31% / .22), transparent 68%); }
 .doodle-field { position: absolute; inset: 0; z-index: 1; overflow: hidden; pointer-events: none; }
-.doodle { position: absolute; color: hsl(var(--primary)); opacity: .34; animation: float-doodle 7s ease-in-out infinite; }
+.doodle-field::before { content: ''; position: absolute; inset: 0; opacity: .18; background-image: radial-gradient(circle, hsl(var(--accent) / .65) 0 1px, transparent 1.8px), radial-gradient(circle, hsl(var(--primary) / .6) 0 1px, transparent 1.8px); background-position: 2rem 4rem, 7rem 9rem; background-size: 13rem 15rem, 17rem 19rem; mask-image: linear-gradient(to bottom, transparent 0, black 10%, black 88%, transparent 100%); }
+.doodle { position: absolute; color: hsl(var(--primary)); opacity: .38; filter: drop-shadow(0 0 .35rem hsl(var(--primary) / .28)); animation: float-doodle 7s ease-in-out infinite; }
 .doodle-heart-one { top: 19rem; left: 7%; color: hsl(var(--accent)); transform: rotate(-18deg); }
 .doodle-spark-one { top: 42rem; right: 10%; animation-delay: -2.2s; }
 .doodle-heart-two { top: 76rem; left: 14%; color: hsl(var(--accent)); animation-delay: -4.1s; }
@@ -100,6 +101,14 @@ button { cursor: pointer; }
 .doodle-spark-three { top: 59rem; left: 8%; color: hsl(43 77% 72%); animation-delay: -5.2s; }
 .doodle-heart-four { top: 94rem; right: 17%; color: hsl(var(--primary)); animation-delay: -2.7s; }
 .doodle-spark-four { top: 130rem; left: 22%; color: hsl(var(--accent)); animation-delay: -4.6s; }
+.doodle-spark-five { top: 12rem; right: 27%; color: hsl(43 77% 72%); animation-delay: -1.8s; }
+.doodle-heart-five { top: 27rem; right: 8%; color: hsl(var(--accent)); animation-delay: -3.8s; }
+.doodle-spark-six { top: 49rem; left: 31%; color: hsl(var(--primary)); animation-delay: -5.6s; }
+.doodle-heart-six { top: 67rem; right: 39%; color: hsl(var(--accent)); opacity: .25; animation-delay: -2.9s; }
+.doodle-spark-seven { top: 86rem; left: 5%; color: hsl(43 77% 72%); animation-delay: -4.8s; }
+.doodle-heart-seven { top: 106rem; right: 31%; color: hsl(var(--primary)); animation-delay: -1.2s; }
+.doodle-spark-eight { top: 121rem; right: 13%; color: hsl(var(--accent)); animation-delay: -3.1s; }
+.doodle-heart-eight { top: 143rem; left: 43%; color: hsl(var(--accent)); animation-delay: -5.1s; }
 .marquee-band, .content-section, .interest-section, .site-footer { position: relative; z-index: 2; }
 
 .site-header { position: fixed; inset: 0 0 auto; z-index: 40; border-bottom: 1px solid hsl(var(--border) / .62); background: hsl(var(--background) / .72); backdrop-filter: blur(18px); }

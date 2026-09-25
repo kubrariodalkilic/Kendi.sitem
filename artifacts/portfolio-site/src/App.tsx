@@ -173,6 +173,14 @@ function App() {
         <Sparkles className="doodle doodle-spark-three" size={18} strokeWidth={1} />
         <Heart className="doodle doodle-heart-four" size={22} strokeWidth={1} />
         <Sparkles className="doodle doodle-spark-four" size={26} strokeWidth={1} />
+        <Sparkles className="doodle doodle-spark-five" size={16} strokeWidth={1} />
+        <Heart className="doodle doodle-heart-five" size={20} strokeWidth={1} />
+        <Sparkles className="doodle doodle-spark-six" size={24} strokeWidth={1} />
+        <Heart className="doodle doodle-heart-six" size={30} strokeWidth={1} />
+        <Sparkles className="doodle doodle-spark-seven" size={19} strokeWidth={1} />
+        <Heart className="doodle doodle-heart-seven" size={16} strokeWidth={1} />
+        <Sparkles className="doodle doodle-spark-eight" size={28} strokeWidth={1} />
+        <Heart className="doodle doodle-heart-eight" size={24} strokeWidth={1} />
       </div>
       <header className="site-header">
         <nav className="nav-wrap" aria-label="Ana navigasyon">
