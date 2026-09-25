@@ -96,6 +96,10 @@ button { cursor: pointer; }
 .doodle-spark-one { top: 42rem; right: 10%; animation-delay: -2.2s; }
 .doodle-heart-two { top: 76rem; left: 14%; color: hsl(var(--accent)); animation-delay: -4.1s; }
 .doodle-spark-two { top: 112rem; right: 6%; color: hsl(43 77% 72%); animation-delay: -1.4s; }
+.doodle-heart-three { top: 31rem; right: 35%; color: hsl(var(--accent)); opacity: .22; animation-delay: -3.4s; }
+.doodle-spark-three { top: 59rem; left: 8%; color: hsl(43 77% 72%); animation-delay: -5.2s; }
+.doodle-heart-four { top: 94rem; right: 17%; color: hsl(var(--primary)); animation-delay: -2.7s; }
+.doodle-spark-four { top: 130rem; left: 22%; color: hsl(var(--accent)); animation-delay: -4.6s; }
 .marquee-band, .content-section, .interest-section, .site-footer { position: relative; z-index: 2; }
 
 .site-header { position: fixed; inset: 0 0 auto; z-index: 40; border-bottom: 1px solid hsl(var(--border) / .62); background: hsl(var(--background) / .72); backdrop-filter: blur(18px); }
@@ -132,7 +136,8 @@ button { cursor: pointer; }
 .ring-small { inset: 15% 12% 12% 15%; border-color: hsl(var(--accent) / .27); transform: rotate(-26deg); }
 .hero-card { position: absolute; top: 12%; right: 10%; bottom: 9%; left: 10%; display: flex; flex-direction: column; justify-content: space-between; padding: 1.8rem; background: linear-gradient(150deg, hsl(274 40% 22%), hsl(274 36% 12%)); border: 1px solid hsl(var(--primary) / .34); border-radius: 47% 53% 51% 49% / 44% 41% 59% 56%; box-shadow: 0 1.5rem 4rem hsl(274 57% 5% / .5), inset 0 0 3rem hsl(var(--primary) / .07); transform: rotate(-8deg); }
 .card-caption, .card-bottom { display: flex; justify-content: space-between; color: hsl(var(--muted-foreground)); font-family: var(--app-font-mono); font-size: .6rem; letter-spacing: .08em; text-transform: uppercase; }
-.card-scribble { display: grid; place-items: center; align-self: center; width: 8rem; height: 8rem; color: hsl(var(--accent)); border: 1px dashed hsl(var(--accent) / .55); border-radius: 49% 51% 45% 55%; transform: rotate(17deg); }
+.card-scribble { display: grid; place-items: center; align-self: center; width: 11rem; height: 11rem; color: hsl(var(--accent)); transform: rotate(7deg); }
+.neon-heart { filter: drop-shadow(0 0 .35rem hsl(var(--accent))) drop-shadow(0 0 1.2rem hsl(var(--accent) / .95)) drop-shadow(0 0 2.5rem hsl(var(--primary) / .7)); animation: neon-heart-pulse 2.8s ease-in-out infinite; }
 .card-bottom { align-items: end; color: hsl(var(--primary)); }
 .orbit-label { position: absolute; color: hsl(var(--muted-foreground)); font-family: var(--app-font-serif); font-size: .9rem; font-style: italic; }
 .label-top { top: 10%; left: 3%; transform: rotate(-15deg); }
@@ -264,6 +269,7 @@ button { cursor: pointer; }
 @keyframes blink { 0%, 45% { opacity: 1; } 46%, 100% { opacity: .15; } }
 @keyframes spin { to { transform: rotate(360deg); } }
 @keyframes float-doodle { 0%, 100% { translate: 0 0; } 50% { translate: 0 -10px; } }
+@keyframes neon-heart-pulse { 0%, 100% { opacity: .86; transform: scale(.96); } 50% { opacity: 1; transform: scale(1.06); } }
 
 @media (max-width: 800px) {
   .nav-wrap, .site-footer { width: min(100% - 2rem, 40rem); }

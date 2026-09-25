@@ -169,6 +169,10 @@ function App() {
         <Sparkles className="doodle doodle-spark-one" size={22} strokeWidth={1} />
         <Heart className="doodle doodle-heart-two" size={18} strokeWidth={1} />
         <Sparkles className="doodle doodle-spark-two" size={30} strokeWidth={1} />
+        <Heart className="doodle doodle-heart-three" size={38} strokeWidth={1} />
+        <Sparkles className="doodle doodle-spark-three" size={18} strokeWidth={1} />
+        <Heart className="doodle doodle-heart-four" size={22} strokeWidth={1} />
+        <Sparkles className="doodle doodle-spark-four" size={26} strokeWidth={1} />
       </div>
       <header className="site-header">
         <nav className="nav-wrap" aria-label="Ana navigasyon">
@@ -220,11 +224,9 @@ function App() {
           </div>
         </div>
         <div className="hero-orbit reveal reveal-delay-2" aria-label="Dekoratif çizim">
-          <div className="orbit-ring ring-large" />
-          <div className="orbit-ring ring-small" />
           <div className="hero-card">
             <span className="card-caption">şimdilik burada</span>
-            <div className="card-scribble"><Heart size={52} strokeWidth={1} /></div>
+            <div className="card-scribble"><Heart className="neon-heart" size={104} strokeWidth={1.1} /></div>
             <div className="card-bottom"><span>html / css / merak</span><MousePointer2 size={17} /></div>
           </div>
           <span className="orbit-label label-top">bir fikir</span>
