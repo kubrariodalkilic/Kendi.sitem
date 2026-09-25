@@ -165,22 +165,22 @@ function App() {
       <div className="ambient ambient-one" />
       <div className="ambient ambient-two" />
       <div className="doodle-field" aria-hidden="true">
-        <Heart className="doodle doodle-heart-one" size={28} strokeWidth={1} />
-        <Sparkles className="doodle doodle-spark-one" size={22} strokeWidth={1} />
-        <Heart className="doodle doodle-heart-two" size={18} strokeWidth={1} />
-        <Sparkles className="doodle doodle-spark-two" size={30} strokeWidth={1} />
-        <Heart className="doodle doodle-heart-three" size={38} strokeWidth={1} />
-        <Sparkles className="doodle doodle-spark-three" size={18} strokeWidth={1} />
-        <Heart className="doodle doodle-heart-four" size={22} strokeWidth={1} />
-        <Sparkles className="doodle doodle-spark-four" size={26} strokeWidth={1} />
-        <Sparkles className="doodle doodle-spark-five" size={16} strokeWidth={1} />
-        <Heart className="doodle doodle-heart-five" size={20} strokeWidth={1} />
-        <Sparkles className="doodle doodle-spark-six" size={24} strokeWidth={1} />
-        <Heart className="doodle doodle-heart-six" size={30} strokeWidth={1} />
-        <Sparkles className="doodle doodle-spark-seven" size={19} strokeWidth={1} />
-        <Heart className="doodle doodle-heart-seven" size={16} strokeWidth={1} />
-        <Sparkles className="doodle doodle-spark-eight" size={28} strokeWidth={1} />
-        <Heart className="doodle doodle-heart-eight" size={24} strokeWidth={1} />
+        <Heart className="doodle doodle-heart-one" size={34} strokeWidth={1} />
+        <Sparkles className="doodle doodle-spark-one" size={28} strokeWidth={1} />
+        <Heart className="doodle doodle-heart-two" size={24} strokeWidth={1} />
+        <Sparkles className="doodle doodle-spark-two" size={36} strokeWidth={1} />
+        <Heart className="doodle doodle-heart-three" size={46} strokeWidth={1} />
+        <Sparkles className="doodle doodle-spark-three" size={24} strokeWidth={1} />
+        <Heart className="doodle doodle-heart-four" size={28} strokeWidth={1} />
+        <Sparkles className="doodle doodle-spark-four" size={32} strokeWidth={1} />
+        <Sparkles className="doodle doodle-spark-five" size={22} strokeWidth={1} />
+        <Heart className="doodle doodle-heart-five" size={26} strokeWidth={1} />
+        <Sparkles className="doodle doodle-spark-six" size={30} strokeWidth={1} />
+        <Heart className="doodle doodle-heart-six" size={38} strokeWidth={1} />
+        <Sparkles className="doodle doodle-spark-seven" size={24} strokeWidth={1} />
+        <Heart className="doodle doodle-heart-seven" size={22} strokeWidth={1} />
+        <Sparkles className="doodle doodle-spark-eight" size={34} strokeWidth={1} />
+        <Heart className="doodle doodle-heart-eight" size={30} strokeWidth={1} />
       </div>
       <header className="site-header">
         <nav className="nav-wrap" aria-label="Ana navigasyon">
