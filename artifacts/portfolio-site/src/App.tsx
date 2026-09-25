@@ -39,6 +39,7 @@ const navigation = [
   ['Hakkımda', 'hakkimda'],
   ['İlgi alanlarım', 'ilgiler'],
   ['Denemeler', 'denemeler'],
+  ['Küçük işletmeler', 'birlikte'],
   ['İletişim', 'iletisim'],
 ] as const;
 
@@ -66,10 +67,17 @@ const interests: Interest[] = [
   },
   {
     number: '04',
-    title: 'Gizem',
-    description: 'SCP, ARG’ler, gizemli olaylar ve açıklaması zor internet hikâyeleri. Merak, araştırmanın en iyi başlangıcı.',
+    title: 'Korku',
+    description: 'Korku hikâyeleri, filmleri ve oyunları. Gerilim, atmosfer ve akılda kalan hikâyeler ilgimi çekiyor.',
     icon: Search,
     accent: 'gold',
+  },
+  {
+    number: '05',
+    title: 'ARG tasarımı',
+    description: 'Hikâyeyi web siteleri, küçük ipuçları ve parçalı anlatılarla kurduğum internet deneyleri.',
+    icon: Sparkles,
+    accent: 'pink',
   },
 ];
 
@@ -156,11 +164,17 @@ function App() {
     <main className="site-shell">
       <div className="ambient ambient-one" />
       <div className="ambient ambient-two" />
+      <div className="doodle-field" aria-hidden="true">
+        <Heart className="doodle doodle-heart-one" size={28} strokeWidth={1} />
+        <Sparkles className="doodle doodle-spark-one" size={22} strokeWidth={1} />
+        <Heart className="doodle doodle-heart-two" size={18} strokeWidth={1} />
+        <Sparkles className="doodle doodle-spark-two" size={30} strokeWidth={1} />
+      </div>
       <header className="site-header">
         <nav className="nav-wrap" aria-label="Ana navigasyon">
           <button data-testid="button-logo" onClick={() => scrollToId('baslangic')} className="brand" aria-label="Başlangıca git">
             <span className="brand-mark"><Heart size={16} strokeWidth={1.5} /></span>
-            <span className="brand-name">Kübra<span className="brand-dot">.</span></span>
+            <span className="brand-name">Kübra Dalkılıç<span className="brand-dot">.</span></span>
           </button>
           <div className="desktop-nav">
             {navigation.map(([label, id]) => (
@@ -196,13 +210,13 @@ function App() {
             Merhaba,<br /><em>ben Kübra.</em>
           </h1>
           <p data-testid="text-hero-description" className="hero-description reveal reveal-delay-2">
-            Kod yazıyorum, çiziyorum, araştırıyorum ve aklıma gelen yeni fikirleri deniyorum.
+            Web tasarımı ve kodlamayla ilgileniyorum. Bir şeyler üretmeyi, yeni fikirler denemeyi ve internette garip şeylerin peşine düşmeyi seviyorum.
           </p>
           <div className="hero-actions reveal reveal-delay-3">
             <button data-testid="button-hero-about" onClick={() => scrollToId('hakkimda')} className="primary-button">
               Biraz daha bak <ArrowDown size={16} />
             </button>
-            <span className="hero-note"><Sparkles size={14} /> web tasarımı öğreniyorum</span>
+            <span className="hero-note"><Sparkles size={14} /> kodlama · tasarım · oyun fikirleri</span>
           </div>
         </div>
         <div className="hero-orbit reveal reveal-delay-2" aria-label="Dekoratif çizim">
@@ -227,13 +241,13 @@ function App() {
       </div>
 
       <section id="hakkimda" className="intro section-anchor content-section">
-        <div className="section-kicker reveal"><span>01</span><span>Hakkımda</span></div>
+          <div className="section-kicker reveal"><span>01</span><span>Benim hakkımda ufak bilgiler</span></div>
         <div className="intro-layout">
-          <h2 className="section-title reveal">Merak ettiğim<br /><em>şeylerin peşinde.</em></h2>
+          <h2 className="section-title reveal">Meraklıyım.<br /><em>Önüme çıkanın peşinde.</em></h2>
           <div className="intro-body reveal reveal-delay-1">
-            <p className="lead-copy">Ben Kübra. Ankara Üniversitesi’nde okuyorum ve web tasarımı ile kodlama öğreniyorum.</p>
+            <p className="lead-copy">Ben Kübra. Ankara Üniversitesi’nde Web Tasarımı ve Kodlama okuyorum.</p>
             <p>Bir şeyi önce düşünüyor, bazen çiziyor, sonra tarayıcıda deniyorum. Güzel görünmesinden çok bir his bırakmasını seviyorum. Henüz yolun başındayım; bu köşe de öğrenirken biriktirdiklerimin küçük bir kaydı.</p>
-            <div className="university-stamp"><GraduationCap size={19} /><span>Ankara Üniversitesi<br /><small>öğrenci / öğrenmeye devam</small></span></div>
+            <div className="university-stamp"><GraduationCap size={19} /><span>Ankara Üniversitesi<br /><small>Web Tasarımı ve Kodlama</small></span></div>
           </div>
         </div>
       </section>
@@ -241,7 +255,7 @@ function App() {
       <section id="ilgiler" className="interest-section section-anchor content-section">
         <div className="section-heading-row reveal">
           <div className="section-kicker"><span>02</span><span>İlgi alanlarım</span></div>
-          <p className="section-aside">Beni ekranın başına oturtan<br />dört küçük merak.</p>
+          <p className="section-aside">Beni ekranın başına oturtan<br />beş küçük merak.</p>
         </div>
         <div className="interest-grid">
           {interests.map((interest, index) => {
@@ -298,9 +312,26 @@ function App() {
         </div>
       </section>
 
+      <section id="birlikte" className="collab-section content-section section-anchor">
+        <div className="section-kicker reveal"><span>05</span><span>Küçük işletmeler</span></div>
+        <div className="collab-layout">
+          <h2 className="section-title reveal">Birlikte<br /><em>güzel bir şey yapalım.</em></h2>
+          <div className="collab-body reveal reveal-delay-1">
+            <p className="collab-lead">Küçük işletmeler için sade, sıcak ve kullanışlı web siteleri hazırlamak istiyorum.</p>
+            <p>Hem kendimi geliştirirken hem de işini internette daha iyi anlatmak isteyen insanlara yardımcı oluyorum. Şimdilik bu çalışmalar için ücret talep etmiyorum; birlikte öğrenip birlikte üretiyoruz.</p>
+            <div className="collab-points">
+              <span>ücretsiz ilk çalışma</span>
+              <span>ihtiyaca göre tasarım</span>
+              <span>birlikte öğrenme</span>
+            </div>
+            <button data-testid="button-collab-contact" onClick={() => scrollToId('iletisim')} className="primary-button">Bir fikrin varsa yaz <ArrowUpRight size={16} /></button>
+          </div>
+        </div>
+      </section>
+
       <section id="iletisim" className="contact-section section-anchor content-section">
         <div className="contact-orbit" aria-hidden="true"><div /><Heart size={34} strokeWidth={1} /></div>
-        <div className="section-kicker reveal"><span>05</span><span>İletişim</span></div>
+        <div className="section-kicker reveal"><span>06</span><span>İletişim</span></div>
         <div className="contact-layout">
           <div className="reveal">
             <h2 className="contact-title">Bir şey<br /><em>konuşalım mı?</em></h2>
@@ -317,7 +348,7 @@ function App() {
       </section>
 
       <footer className="site-footer">
-        <p data-testid="text-footer"><Heart size={13} /> Kübra’nın internet köşesi · merakla yapıldı</p>
+        <p data-testid="text-footer"><Heart size={13} /> Kübra Dalkılıç’ın internet köşesi · merakla yapıldı</p>
         <div className="footer-links">
           <button data-testid="button-footer-top" onClick={() => scrollToId('baslangic')}>başa dön <ArrowUpRight size={13} /></button>
           <button data-testid="button-footer-github" onClick={() => scrollToId('iletisim')}><Github size={14} /> github bağlantısı yakında</button>
