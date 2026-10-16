@@ -1,8 +1,4 @@
 json
 {
-  "framework": "vite",
-  "outputDirectory": "dist",
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ]
+  "framework": "vite"
 }
