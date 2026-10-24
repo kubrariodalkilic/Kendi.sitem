@@ -252,6 +252,8 @@ button { cursor: pointer; }
 .contact-layout { display: grid; grid-template-columns: .95fr 1.05fr; gap: 8rem; margin-top: 3.6rem; }
 .contact-title { margin: 0; font-family: var(--app-font-serif); font-size: clamp(3.3rem, 6.5vw, 6.5rem); font-weight: 500; line-height: .9; letter-spacing: -.07em; }
 .contact-copy { max-width: 25rem; margin: 2rem 0 1.5rem; color: hsl(var(--muted-foreground)); font-size: .87rem; line-height: 1.85; }
+.contact-email { color: hsl(var(--primary)); text-decoration-color: hsl(var(--primary) / .45); text-underline-offset: .2em; overflow-wrap: anywhere; }
+.contact-email:hover { color: hsl(var(--accent)); }
 .text-button { display: inline-flex; align-items: center; gap: .55rem; padding: .3rem 0; color: hsl(var(--primary)); font-family: var(--app-font-mono); font-size: .65rem; background: transparent; border: 0; border-bottom: 1px solid hsl(var(--primary) / .35); transition: color .25s ease, border-color .25s ease; }
 .text-button:hover { color: hsl(var(--accent)); border-color: hsl(var(--accent)); }
 .contact-form { display: grid; gap: 1.7rem; padding: 1.7rem; background: hsl(var(--card) / .58); border: 1px solid hsl(var(--border)); border-radius: .7rem; }
@@ -266,8 +268,8 @@ button { cursor: pointer; }
 .site-footer p { display: flex; align-items: center; gap: .45rem; margin: 0; }
 .site-footer p svg { color: hsl(var(--accent)); }
 .footer-links { display: flex; gap: 1.5rem; }
-.footer-links button { display: inline-flex; align-items: center; gap: .35rem; padding: 0; color: inherit; background: transparent; border: 0; transition: color .25s ease; }
-.footer-links button:hover { color: hsl(var(--foreground)); }
+.footer-links button, .footer-links a { display: inline-flex; align-items: center; gap: .35rem; padding: 0; color: inherit; background: transparent; border: 0; text-decoration: none; transition: color .25s ease; }
+.footer-links button:hover, .footer-links a:hover { color: hsl(var(--foreground)); }
 
 .reveal { opacity: 0; transform: translateY(1.5rem); transition: opacity .8s ease, transform .8s ease; }
 .reveal.is-visible { opacity: 1; transform: translateY(0); }

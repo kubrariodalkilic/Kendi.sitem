@@ -7,9 +7,9 @@ import {
   Copy,
   ExternalLink,
   Gamepad2,
-  Github,
   GraduationCap,
   Heart,
+  Mail,
   Menu,
   MousePointer2,
   Pencil,
@@ -144,7 +144,7 @@ function App() {
   );
 
   const copyContactNote = async () => {
-    const note = 'Merhaba Kübra,\\n\\nSana portföyündeki çalışmalar hakkında yazıyorum.\\n\\n';
+    const note = 'Merhaba Kübra,\n\nSana portföyündeki çalışmalar hakkında yazıyorum.\n\n';
     await navigator.clipboard?.writeText(note);
     setCopied(true);
     window.setTimeout(() => setCopied(false), 2400);
@@ -152,6 +152,13 @@ function App() {
 
   const prepareMessage = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    const name = String(formData.get('ad') ?? '').trim();
+    const senderEmail = String(formData.get('eposta') ?? '').trim();
+    const message = String(formData.get('mesaj') ?? '').trim();
+    const subject = `Portföy sitesi mesajı - ${name}`;
+    const body = `Merhaba Kübra,\n\n${message}\n\n---\nGönderen: ${name}\nE-posta: ${senderEmail}`;
+    window.location.href = `mailto:kubra.dalkilic06@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setMessageReady(true);
   };
 
@@ -345,14 +352,15 @@ function App() {
         <div className="contact-layout">
           <div className="reveal">
             <h2 className="contact-title">Bir şey<br /><em>konuşalım mı?</em></h2>
-            <p className="contact-copy">Bir fikir, bir soru ya da sadece merhaba. Mesaj taslağını hazırlayabilirsin; iletişim adresimi buraya yakında ekleyeceğim.</p>
+            <p className="contact-copy">Bir fikir, bir soru ya da sadece merhaba. Formu doldurunca e-posta uygulaman açılır ve mesajın hazır gelir. Göndermek için e-posta uygulamanda “Gönder”e basman yeterli. İstersen doğrudan <a className="contact-email" href="mailto:kubra.dalkilic06@gmail.com">kubra.dalkilic06@gmail.com</a> adresine de yazabilirsin.</p>
             <button data-testid="button-copy-contact" onClick={copyContactNote} className="text-button">{copied ? <><Check size={15} /> Taslak kopyalandı</> : <><Copy size={15} /> Mesaj taslağını kopyala</>}</button>
           </div>
           <form data-testid="form-contact" onSubmit={prepareMessage} className="contact-form reveal reveal-delay-1">
             <label><span>Adın</span><input data-testid="input-name" name="ad" required placeholder="Nasıl hitap edeyim?" /></label>
+            <label><span>E-posta adresin</span><input data-testid="input-email" name="eposta" type="email" required placeholder="Sana nasıl dönüş yapayım?" /></label>
             <label><span>Mesajın</span><textarea data-testid="input-message" name="mesaj" required rows={4} placeholder="Aklından geçenleri anlat..." /></label>
-            <button data-testid="button-send-message" type="submit" className="primary-button">{messageReady ? 'Taslak hazır' : 'Mesajı hazırla'} <ArrowUpRight size={16} /></button>
-            {messageReady && <p data-testid="status-message-ready" className="form-status">Mesajın hazır. İletişim adresi eklendiğinde buradan doğrudan gönderebilirsin.</p>}
+            <button data-testid="button-send-message" type="submit" className="primary-button">E-posta uygulamasında gönder <ArrowUpRight size={16} /></button>
+            {messageReady && <p data-testid="status-message-ready" className="form-status">E-posta uygulaman açılmalı. Mesajın gönderilmesi için uygulamada “Gönder”e bas.</p>}
           </form>
         </div>
       </section>
@@ -361,7 +369,7 @@ function App() {
         <p data-testid="text-footer"><Heart size={13} /> Kübra Dalkılıç’ın internet köşesi · merakla yapıldı</p>
         <div className="footer-links">
           <button data-testid="button-footer-top" onClick={() => scrollToId('baslangic')}>başa dön <ArrowUpRight size={13} /></button>
-          <button data-testid="button-footer-github" onClick={() => scrollToId('iletisim')}><Github size={14} /> github bağlantısı yakında</button>
+          <a data-testid="link-footer-email" href="mailto:kubra.dalkilic06@gmail.com"><Mail size={14} /> e-posta gönder</a>
         </div>
       </footer>
     </main>
